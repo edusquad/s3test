@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+
+</head>
+<body>
+{{#parentMember}}
+<div class="join">
+    <form class="signup-form" action="/parentSignUp" method="POST">
+    <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}" />
+    <input type="hidden" name="parentMember" value="{{parentMember}}" />
+		<p>    
+				<label for="user_id">STEP 2</label>
+				<input type="email"  name="alias" id="alias" placeholder="사용할 별명">
+        </p>
+		<button type="submit" class="btn">다 음</button>
+    </form> 		
+</div>
+{{/parentMember}}
+{{^parentMember}}
+<a href="/">Go Index</a>
+{{/parentMember}}
+      <script type="text/javascript" src="/js/member.js"></script>
+      <script type="text/javascript" src="/lib/jquery-2.2.0.min.js"></script>
+      <script type="text/javascript" src="/lib/materialize.min.js"></script>    
+</body>
+</html>

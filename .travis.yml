@@ -1,0 +1,8 @@
+language: java
+script:
+- ./gradlew clean build -x test
+deploy:
+  provider: s3
+  access_key_id: "AKIAJJV4VKFSALRMJX2Q"
+  secret_access_key: "YOUR AWS SECRET KEY"
+  bucket: "educhoice-fe"

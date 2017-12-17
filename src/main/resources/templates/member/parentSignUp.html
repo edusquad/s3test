@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+
+</head>
+<body>
+<div class="join">
+    <form class="signup-form" action="/generateToken" method="POST">
+    <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}" />
+        <p>
+            <label for="uemail">Email</label>
+            <input type="text" id="uemail" name="uemail" placeholder="이메일 주소 (example@example.com)" class="validate">
+        </p>
+        <input type="submit" value="이메일 인증" />
+    </form>        
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="upw" name="upw" placeholder="password here">
+        </p>
+		<button type="button" class="btn">다 음</button>
+</div>
+      <script type="text/javascript" src="/js/member.js"></script>
+      <script type="text/javascript" src="/lib/jquery-2.2.0.min.js"></script>
+      <script type="text/javascript" src="/lib/materialize.min.js"></script>    
+</body>
+</html>

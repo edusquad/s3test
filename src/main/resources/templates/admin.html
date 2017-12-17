@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<title>Thymeleaf3</title>
+
+</head>
+<body>
+	<h1>ADMIN</h1>
+	{{#authorize "isAuthenticated()"}}
+	<ul>
+		<li>
+			<form action="/logout" method="post">
+				<input type="submit" value="Logout">
+			</form>
+		</li>
+	</ul>
+	{{/authorize}}
+
+
+</body>
+</html>

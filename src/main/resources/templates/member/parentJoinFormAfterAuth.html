@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+
+</head>
+<body>
+{{#token}}
+<div class="join">
+    <form class="signup-form" action="/parentAdditinal" method="POST">
+    <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}" />
+    <input type="hidden" name="token" value="{{token}}" />
+			<fieldset disabled>
+				<label for="user_id">STEP 1</label>
+				<input type="email"  name="uemail" id="uemail" value="{{uemail}}">
+			</fieldset>        
+       
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="upw" name="upw" placeholder="password here">
+        </p>
+		<button type="submit" class="btn">다 음</button>
+    </form> 		
+</div>
+{{/token}}
+{{^token}}
+<a href="/">Go Index</a>
+{{/token}}
+      <script type="text/javascript" src="/js/member.js"></script>
+      <script type="text/javascript" src="/lib/jquery-2.2.0.min.js"></script>
+      <script type="text/javascript" src="/lib/materialize.min.js"></script>    
+</body>
+</html>

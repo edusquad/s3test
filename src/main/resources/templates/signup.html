@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+<div class="join">
+    <form class="join join-info" action="/member" method="post">
+    <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}" />
+        <p>
+            <label for="userId">Username</label>
+            <input type="text" id="uid" name="uid" placeholder="user ID here">
+
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="upw" name="upw" placeholder="password here">
+        </p>
+        <p>
+            <label for="name">Mail</label>
+            <input type="text" id="uemail" name="uemail" placeholder="Your Mail Here">
+        </p>
+        <button type="submit" class="btn">회 원 가 입</button>
+    </form>
+    <a href="/github">Sign in with GitHub account</a>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+# edu-connect-be [![Build Status](https://travis-ci.org/edu-connect/edu-connect-be.svg)](https://travis-ci.org/edu-connect/edu-connect-be)

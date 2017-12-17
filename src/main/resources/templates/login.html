@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+</head>
+<body>
+<div class="login">
+    <div class="login login-form">
+        <form class="loginInfo" action="/login" method="post">
+            <p>
+                <label for="username">Username</label>
+                <input type="text" id="uemail" name="uemail" placeholder="user id here"/>
+            </p>
+            <p>
+                <label for="password">password</label>
+                <input type="password" id="upw" name="upw" placeholder="password here">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            </p>
+            <button type="submit" class="btn">Log in</button>
+
+
+        </form>
+        <a href="/signUp">Join</a>
+        <a href="/login/facebook">
+            Facebook 로그인
+        </a>
+        
+        
+        <a href="/login/kakao">
+            Kakao  로그인
+        </a>        
+        
+        <a href="/login/naver">
+            Naver 로그인
+        </a>          
+    </div>
+
+
+</div>
+
+</body>
+</html>
